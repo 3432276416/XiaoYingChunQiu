@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ContentButton.cs.meta
+guid: d66f0399b89e7a2469667576c3273dd9
+========
+guid: 5780afb26712e2c4e91c29cb5e2bb64b
+>>>>>>>> main:Assets/Scripts/UI/HeroInfoDisplayController.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

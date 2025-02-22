@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game Data/Events/HeroMenu/HeroMenuSelectEvent.asset.meta
+guid: 77adcb33647b36c49b1b28a65a9ca273
+========
+guid: a621274ee872c0a48ad80c8b3ff7f82a
+>>>>>>>> Observator:Assets/Game Data/Events/CardMenu/UpdateSelecCardEvent.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

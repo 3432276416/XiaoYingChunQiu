@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: HeroData
+  m_EditorClassIdentifier: 
+  m_GroupName: HeroData
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 747c41bfaf1bedd419139e5cc60663b4
+  m_SerializeEntries:
+  - m_GUID: 0dfa780406bcfd743be2118264d492ec
+    m_Address: "Assets/Game Data/Card/Hero/\u6234\u5B97.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5d1a338484ab0434ca4979978e8a5f5a
+    m_Address: "Assets/Game Data/Card/Hero/\u6768\u5FD7.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbb853a134851f143a3f984193fc667c
+    m_Address: "Assets/Game Data/Card/Hero/\u6BB5\u666F\u4F4F.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36f75012749c8b842950610a5070e8c3
+    m_Address: "Assets/Game Data/Card/Hero/\u5B8B\u4E07.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7403f0fad16beeb4194d3df7aba2ea90
+    m_Address: "Assets/Game Data/Card/Hero/\u516C\u5B59\u80DC.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d6d0ee50ebbace44a9d07eda055772b
+    m_Address: "Assets/Game Data/Card/Hero/\u71D5\u9752.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 702412cc91066054bacf9f0134d672bf
+    m_Address: "Assets/Game Data/Card/Hero/\u962E\u5C0F\u4E94.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6c508d504e9971499e43ff5a6d997f3
+    m_Address: "Assets/Game Data/Card/Hero/\u82B1\u8363.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 332e4d52abe78ed419173494e843dda2
+    m_Address: "Assets/Game Data/Card/Hero/\u962E\u5C0F\u4E8C.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e424e7b389ed78143856bee5f064743f
+    m_Address: "Assets/Game Data/Card/Hero/\u6731\u6B66.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e99763285fcb7d4fb2f343be8f5a341
+    m_Address: "Assets/Game Data/Card/Hero/\u6797\u51B2.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2d4649fbe18e714994b06606b9f3101
+    m_Address: "Assets/Game Data/Card/Hero/\u5434\u7528.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2d71548188472149b38f3f65d130dd7
+    m_Address: "Assets/Game Data/Card/Hero/\u96F7\u6A2A.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7a688f8841ec20419a6acd347da8e4d
+    m_Address: "Assets/Game Data/Card/Hero/\u6248\u4E09\u5A18.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2696f329254ba0a428f9b3d47bacaecd
+    m_Address: "Assets/Game Data/Card/Hero/\u65F6\u8FC1.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 144f78ef27009e749b57d2da379000b6
+    m_Address: "Assets/Game Data/Card/Hero/\u675C\u8FC1.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f9ca833de9f8314aa6d6d121e8ccdd2
+    m_Address: "Assets/Game Data/Card/Hero/\u962E\u5C0F\u4E03.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 726133f88803e38478bc015eb9ba51f3
+    m_Address: "Assets/Game Data/Card/Hero/\u767D\u80DC.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f31138737606afc4fabbcc26745cbeac
+    m_Address: "Assets/Game Data/Card/Hero/\u5218\u5510.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b49f63632aad0c469135b0b5fa47c88
+    m_Address: "Assets/Game Data/Card/Hero/\u6641\u76D6.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 450f62b5e055fca4a8ff6c34d7f379b9
+    m_Address: "Assets/Game Data/Card/Hero/\u6731\u8D35.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93cdb299b70fb9940ae8796412fb9dca
+    m_Address: "Assets/Game Data/Card/Hero/\u6731\u4EDD.asset"
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - HeroData
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 769a9d7b87a41d941b4dba0b8a19b86d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 43e92b0d929862a4ab4639e6af3b41f3, type: 2}
+    - {fileID: 11400000, guid: c7cb215fd0ee6774ea01addde1a41b42, type: 2}

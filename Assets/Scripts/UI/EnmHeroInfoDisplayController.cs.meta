@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/UI/EnmHeroInfoDisplayController.cs.meta
+guid: 867ceba12a9d9e6448e41466c31cdfdf
+========
+guid: 3fd1988db3627fe4987be1e9bab04ccc
+>>>>>>>> main:Assets/CardMenu.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

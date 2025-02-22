@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game Data/CardLib/AllCardLib.asset.meta
+guid: 9a44126429809e1469618e543c4fdb8b
+========
+guid: 6e952703466fe2346a3a43172c14d1b0
+>>>>>>>> Observator:Assets/Game Data/Events/CardMenu/CardSelectedEvent.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

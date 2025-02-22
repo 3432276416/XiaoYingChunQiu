@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game Data/CardLib/HeroLib/AllHeroLib.asset.meta
+guid: 51e635faa7fd23848bf477c16917869c
+========
+guid: a621274ee872c0a48ad80c8b3ff7f82a
+>>>>>>>> Observator:Assets/Game Data/Events/CardMenu/UpdateSelecCardEvent.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

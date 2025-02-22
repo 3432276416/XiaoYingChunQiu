@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ba5bc62eb334e4190e6b8a27241749, type: 3}
+  m_Name: boss ActionConfig
+  m_EditorClassIdentifier: 
+  Actions:
+  - effect: {fileID: 11400000, guid: 21a54e544fd3e8a4595b2d2879c80386, type: 2}
+    intent: {fileID: 21300000, guid: a34550cedb3234dc085a67e7fb9bf5c8, type: 3}
+  - effect: {fileID: 11400000, guid: 71e7324e61febd24fabdd196cd22099f, type: 2}
+    intent: {fileID: 21300000, guid: e60462361db3140c59c13b7122a2106c, type: 3}
+  - effect: {fileID: 11400000, guid: d7d07300de6e6664e85073fa4cc75c4f, type: 2}
+    intent: {fileID: 21300000, guid: 98d622e3aaa3e464a933a2720153fdae, type: 3}
+  - effect: {fileID: 11400000, guid: e8bd41b44244a61449b0e5ae857c59e0, type: 2}
+    intent: {fileID: 21300000, guid: 810448b82870c45058f8b2de5423274a, type: 3}
+  - effect: {fileID: 11400000, guid: e971c4585f2972c4286b4af034cc5f3c, type: 2}
+    intent: {fileID: 21300000, guid: d7f03361f8c0a4e1293a0b3eb59d0320, type: 3}

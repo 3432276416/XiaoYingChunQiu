@@ -1,0 +1,10 @@
+.turnbutton {
+}
+
+.turnbutton:hover {
+    scale: 1.1 1.1;
+}
+
+.turnbutton:active {
+    scale: 0.9 0.9;
+}

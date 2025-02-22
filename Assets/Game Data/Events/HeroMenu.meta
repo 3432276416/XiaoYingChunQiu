@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game Data/Events/HeroMenu.meta
+guid: 4b7197c12b73c034db16e588fd1baa85
+========
+guid: 32c9051f370c8374ab521b8c1ab64177
+>>>>>>>> Observator:Assets/Scripts/UI/HeroMenu.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

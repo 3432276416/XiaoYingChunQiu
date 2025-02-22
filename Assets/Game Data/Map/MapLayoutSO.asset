@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3236c67ecfad8f64598ffaf1d716dadd, type: 3}
+  m_Name: MapLayoutSO
+  m_EditorClassIdentifier: 
+  roomMapDataList:
+  - posx: -7.6888895
+    posy: 0
+    row: 0
+    col: 0
+    data: {fileID: 11400000, guid: c4c829c9d87022f40af0cf873008d624, type: 2}
+    state: 1
+    LinkTo:
+    - {x: 1, y: 1}
+    - {x: 1, y: 0}
+  - posx: -4.133333
+    posy: 1.6666666
+    row: 0
+    col: 1
+    data: {fileID: 11400000, guid: b02e2b81d58d15e4e8e2cc4360e4b35f, type: 2}
+    state: 1
+    LinkTo:
+    - {x: 2, y: 1}
+  - posx: -4.133333
+    posy: -1.6666667
+    row: 1
+    col: 1
+    data: {fileID: 11400000, guid: b02e2b81d58d15e4e8e2cc4360e4b35f, type: 2}
+    state: 0
+    LinkTo:
+    - {x: 2, y: 1}
+    - {x: 2, y: 0}
+  - posx: -0.5777776
+    posy: 1.6666666
+    row: 0
+    col: 2
+    data: {fileID: 11400000, guid: b02e2b81d58d15e4e8e2cc4360e4b35f, type: 2}
+    state: 0
+    LinkTo:
+    - {x: 3, y: 0}
+  - posx: -0.5777776
+    posy: -1.6666667
+    row: 1
+    col: 2
+    data: {fileID: 11400000, guid: 0a751bc90b450784f96641bd71322445, type: 2}
+    state: 1
+    LinkTo:
+    - {x: 3, y: 0}
+  - posx: 2.9777782
+    posy: 0
+    row: 0
+    col: 3
+    data: {fileID: 11400000, guid: c4c829c9d87022f40af0cf873008d624, type: 2}
+    state: 1
+    LinkTo:
+    - {x: 4, y: 0}
+  - posx: 6.488889
+    posy: 0
+    row: 0
+    col: 4
+    data: {fileID: 11400000, guid: c4f5fd951bf02f348a30ed71f71b9a69, type: 2}
+    state: 1
+    LinkTo: []
+  LinePosList:
+  - startPos:
+      x: -7.6888895
+      y: 0
+      z: 0
+    endPos:
+      x: -4.133333
+      y: -1.6666667
+      z: 0
+  - startPos:
+      x: -4.133333
+      y: 1.6666666
+      z: 0
+    endPos:
+      x: -7.6888895
+      y: 0
+      z: 0
+  - startPos:
+      x: -4.133333
+      y: 1.6666666
+      z: 0
+    endPos:
+      x: -0.5777776
+      y: -1.6666667
+      z: 0
+  - startPos:
+      x: -4.133333
+      y: -1.6666667
+      z: 0
+    endPos:
+      x: -0.5777776
+      y: -1.6666667
+      z: 0
+  - startPos:
+      x: -0.5777776
+      y: 1.6666666
+      z: 0
+    endPos:
+      x: -4.133333
+      y: -1.6666667
+      z: 0
+  - startPos:
+      x: -0.5777776
+      y: 1.6666666
+      z: 0
+    endPos:
+      x: 2.9777782
+      y: 0
+      z: 0
+  - startPos:
+      x: -0.5777776
+      y: -1.6666667
+      z: 0
+    endPos:
+      x: 2.9777782
+      y: 0
+      z: 0
+  - startPos:
+      x: 2.9777782
+      y: 0
+      z: 0
+    endPos:
+      x: 6.488889
+      y: 0
+      z: 0

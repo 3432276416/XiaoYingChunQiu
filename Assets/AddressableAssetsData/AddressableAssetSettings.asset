@@ -47,6 +47,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 376c5e8d0366c1045bf6dc0cf4a2815b, type: 2}
   - {fileID: 11400000, guid: 91305afdef5f27042bd0fe599e75ee60, type: 2}
   - {fileID: 11400000, guid: f2c7fcccccab2bd41ac3f626d238a55c, type: 2}
+  - {fileID: 11400000, guid: e37280059c752994f848d815aa71445d, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -88,6 +89,8 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - "\u5F15\u8A00"
+    - "\u64CD\u4F5C\u4ECB\u7ECD"
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: a22637e22d46eee4e8e6dd7696bcc25a, type: 2}

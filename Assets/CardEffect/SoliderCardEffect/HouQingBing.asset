@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8071d9539c3969b4988ee49c40db2c9f, type: 3}
+  m_Name: HouQingBing
+  m_EditorClassIdentifier: 
+  effeToPlayer: {fileID: 0}
+  effectToHero: {fileID: 11400000, guid: b4377f970066e4945b8fcc868a29b3a9, type: 2}
+  Description: 

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f40c54d22c8a48b47924d00443ee051f, type: 3}
+  m_Name: "\u675C\u8FC1"
+  m_EditorClassIdentifier: 
+  heroSprite: {fileID: 21300000, guid: 5829f9a6ed61dbf4e9e1adb134233461, type: 3}
+  Name: "\u675C\u8FC1 "
+  Title: "\u6478\u7740\u5929 "
+  elem: 3
+  Point: 0
+  HP: 11
+  Attack: 1
+  passiveEffects: []
+  unlockEffects: []
+  costEffects: []

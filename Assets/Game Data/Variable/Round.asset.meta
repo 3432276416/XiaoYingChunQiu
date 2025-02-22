@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game Data/Variable/Round.asset.meta
+guid: e446ea00606e7d84598493e5668131b2
+========
+guid: 77adcb33647b36c49b1b28a65a9ca273
+>>>>>>>> main:Assets/Game Data/Events/CardMenuSelectEvent.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

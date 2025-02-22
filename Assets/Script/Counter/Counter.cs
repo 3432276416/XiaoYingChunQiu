@@ -1,0 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Counter : BaseCounter
+{
+    public GameObject confirmUI;
+
+    public void ShowConfirmUI()
+    {
+        confirmUI.SetActive(true);
+    }
+}
