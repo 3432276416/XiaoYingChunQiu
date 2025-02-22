@@ -855,8 +855,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: {fileID: 474335605}
   speakerContent: {fileID: 248968759}
+  Dialog: {fileID: 1269183960}
   typeWriter: {fileID: 182677379}
-  CloseDialogEvent: {fileID: 11400000, guid: b98a11e7ab266044fbb5ad89cd88be54, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -65,6 +65,7 @@ public class Laser : MonoBehaviour
                     }
                     else if(prism.type==PrismType.End && isEnd==false)
                     {
+                        Debug.Log("激光到达终点");
                         prism.LaserToEnd(this);
                         isEnd = true;
                        

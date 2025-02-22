@@ -17,7 +17,7 @@ public class DialogMgr : MonoBehaviour
     private void TeachLaserLevel(object oj,EventArgs args)
     {
 
-        EventManager.Instance.RaiseEvent(EventName.LoadDialog, this);
+        //EventManager.Instance.RaiseEvent(EventName.LoadDialog, this);
 
         //EventManager.Instance.RaiseEvent(EventName.TeachLaserLevel, this);
     }

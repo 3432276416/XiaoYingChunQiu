@@ -11,4 +11,6 @@ public static class EventName
     public const string LoadIntroduction = "LoadIntroduction";
     public const string LaserToEnd = "LaserToEnd";
     public const string InteractPrism = "InteractPrism";
+    public const string CloseDialog = "CloseDialog";
+
 }

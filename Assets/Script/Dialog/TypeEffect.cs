@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TypeWriter : MonoBehaviour
@@ -27,6 +28,10 @@ public class TypeWriter : MonoBehaviour
 
     private IEnumerator TypeLine(string text)
     {
+        if(textDisplay.text==null) //没有文本了
+        {
+            yield break;
+        }
         isTyping = true;
         textDisplay.maxVisibleCharacters = 0;
         for (int i = 0; i < text.Length; i++)

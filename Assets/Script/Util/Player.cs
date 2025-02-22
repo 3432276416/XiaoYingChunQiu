@@ -26,20 +26,21 @@ public class Player : MonoBehaviour
     {
         Instance = this;
         EventManager.Instance.AddListener(EventName.InteractPrism, InteractPrism);
+        EventManager.Instance.AddListener(EventName.LaserToEnd, LaserLevelSuccess);
     }
 
     private void OnEnable()
     {
-        if (gameObject.scene == SceneManager.GetSceneByName(SceneName.LaserLevel)) //当前玩家在 laserLevel关卡中
-        {
-            Debug.Log("玩家当前在激光关卡");
-            EventManager.Instance.RaiseEvent(EventName.TeachLaserLevel, EventName.TeachLaserLevel);
-        }
+        
     }
     private void Start()
     {
+        if (gameObject.scene == SceneManager.GetSceneByName(SceneName.LaserLevel)) //当前玩家在 laserLevel关卡中
+        {
+            Debug.Log("玩家当前在激光关卡");
+            EventManager.Instance.RaiseEvent(EventName.TeachLaserLevel, this);
+        }
 
-       
     }
 
 
@@ -121,6 +122,11 @@ public class Player : MonoBehaviour
         {
             selectedPrism.RotatePrism();
         }
+    }
+
+    public void LaserLevelSuccess(object name, EventArgs args)
+    {
+        EventManager.Instance.RaiseEvent(EventName.LaserLevelSuccess, this);
     }
 
 }
