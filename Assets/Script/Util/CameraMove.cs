@@ -1,9 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace MilitaryGame
@@ -14,7 +8,6 @@ namespace MilitaryGame
     /// </summary>
     public class CameraMove : MonoBehaviour
     {
-
         float Minzoom, Maxzoom, zoom;
         float MovingSpeed;
         bool isDraging = false;

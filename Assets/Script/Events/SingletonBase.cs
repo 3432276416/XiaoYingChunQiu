@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class SingletonBase<T> where T : new()
 {
     private static T instance;
-    // ¶àÏß³Ì°²È«»úÖÆ
+    // ï¿½ï¿½ï¿½ß³Ì°ï¿½È«ï¿½ï¿½ï¿½ï¿½
     private static readonly object locker = new object();
     public static T Instance
     {
@@ -13,7 +9,7 @@ public class SingletonBase<T> where T : new()
         {
             if (instance == null)
             {
-                //lockÐ´µÚÒ»¸öifÀïÊÇÒòÎªÖ»ÓÐ¸ÃÀàµÄÊµÀý»¹Ã»´´½¨Ê±£¬²ÅÐèÒª¼ÓËø£¬ÕâÑù¿ÉÒÔ½ÚÊ¡ÐÔÄÜ
+                //lockÐ´ï¿½ï¿½Ò»ï¿½ï¿½ifï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÖ»ï¿½Ð¸ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½Ê¡ï¿½ï¿½ï¿½ï¿½
                 lock (locker)
                 {
                     if (instance == null)

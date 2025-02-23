@@ -1,19 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+public enum LaserType
+{
+    Normal,
+    Penetrate //ï¿½É´ï¿½Í¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+}
 
 public class Laser : MonoBehaviour
 {
     public int damageOverTime = 30;
-  
-
+    [SerializeField] public LaserType type; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public Prism shootingPrism; //ï¿½ï¿½ï¿½ÐµÄ·ï¿½ï¿½ï¿½Ì¨
     public GameObject HitEffect;
     public float HitOffset = 0;
     public bool uselaserRotation = false;
 
-    public float MaxLength;  //×î´ó³¤¶È
+    public float MaxLength;  //ï¿½ï¿½ó³¤¶ï¿½
     private LineRenderer laser;
-    private bool isEnd; //ÊÇ·ñµ½´ï¹ýÖÕµãÁË
+    private bool isEnd; //ï¿½Ç·ñµ½´ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½
     public float MainTextureLength = 1f;
     public float NoiseTextureLength = 1f;
     private Vector4 Length = new Vector4(1, 1, 1, 1);
@@ -54,23 +58,31 @@ public class Laser : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, MaxLength))//CHANGE THIS IF YOU WANT TO USE LASERRS IN 2D: if (hit.collider != null)
             {
 
-                //´¦Àí·´ÉäÎïÌå
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 Prism prism = hit.collider.gameObject.GetComponentInParent<Prism>();
-                if ( prism != null && prism.isShooting == false)
+                shootingPrism = prism;
+                if ( prism != null && prism.isShooting==false)
                 {
                     if (prism.type == PrismType.Normal)
                     {
                         prism.CreateLaser();
-                        prism.isShooting = true;
+                        
                     }
                     else if(prism.type==PrismType.End && isEnd==false)
                     {
-                        Debug.Log("¼¤¹âµ½´ïÖÕµã");
+                        Debug.Log("ï¿½ï¿½ï¿½âµ½ï¿½ï¿½ï¿½Õµï¿½");
                         prism.LaserToEnd(this);
                         isEnd = true;
                        
                     }
                 }
+                Obstacle obstacle = hit.collider.gameObject.GetComponent<Obstacle>();
+                if ( obstacle != null && type==LaserType.Penetrate)
+                {
+                    obstacle.DestroyObstacle();
+                }
+
+                
 
                 //End laser position if collides with object
                 laser.SetPosition(1, hit.point);
@@ -138,5 +150,11 @@ public class Laser : MonoBehaviour
                 if (AllPs.isPlaying) AllPs.Stop();
             }
         }
+    }
+
+    public void SetLaserType(LaserType lasertype)
+    {
+        this.type = lasertype;   
+        Debug.Log("ï¿½ï¿½ï¿½ï¿½"+lasertype.ToString());
     }
 }

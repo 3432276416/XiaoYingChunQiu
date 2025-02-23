@@ -1,14 +1,13 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class TypeWriter : MonoBehaviour
 {
     private Coroutine typingCoroutine;
-    public TextMeshProUGUI textDisplay; //´òÓ¡¶Ô»°
+    public TextMeshProUGUI textDisplay; //ï¿½ï¿½Ó¡ï¿½Ô»ï¿½
     public float waitingSeconds = 0.05f;
-    public bool isTyping; //ÊÇ·ñÕýÔÚ´òÓ¡
+    public bool isTyping; //ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ó¡
 
     private void Awake()
     {
@@ -28,7 +27,7 @@ public class TypeWriter : MonoBehaviour
 
     private IEnumerator TypeLine(string text)
     {
-        if(textDisplay.text==null) //Ã»ÓÐÎÄ±¾ÁË
+        if(textDisplay.text==null) //Ã»ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
         {
             yield break;
         }
@@ -42,7 +41,7 @@ public class TypeWriter : MonoBehaviour
         isTyping = false;
     }
 
-    public void CompleteLine()  //¿ìËÙ´òÓ¡ÍêÒ»ÐÐ×Ö
+    public void CompleteLine()  //ï¿½ï¿½ï¿½Ù´ï¿½Ó¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½
     {
         if (typingCoroutine != null && isTyping)
         {

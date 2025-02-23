@@ -1,6 +1,4 @@
 using System.Collections;
-using UnityEditor.Rendering.LookDev;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
@@ -16,7 +14,8 @@ public class SceneLoadManager : MonoBehaviour
     public AssetReference GameMenu;
     public AssetReference Dialog; //对话界面
     public AssetReference Map; //地图界面
-    public AssetReference LaberLevel;
+    public AssetReference LaserLevel1;
+    public AssetReference LaserLevel2;
 
     public FadePanel fadePanel;
 
@@ -36,11 +35,32 @@ public class SceneLoadManager : MonoBehaviour
     private void Awake()
     {
         EventManager.Instance.AddListener(EventName.LoadDialog, LoadDialog);  
+        EventManager.Instance.AddListener(EventName.LoadLaserLevel1, LoadLaserLevel1);
+        EventManager.Instance.AddListener(EventName.LoadLaserLevel2, LoadLaserLevel2);
+
+        EventManager.Instance.RaiseEvent(EventName.LoadLaserLevel1,this);
     }
 
     public void Start()
     {
-        //EventManager.Instance.RaiseEvent(EventName.LoadDialog,this);
+        
+    }
+
+    public void LoadLaserLevel1(object sender, EventArgs e)
+    {
+        if (curScene != null)
+            StartCoroutine(UnloadSceneEvent());
+
+        curScene = LaserLevel1;
+        StartCoroutine(LoadSceneEvent());
+    }
+    public void LoadLaserLevel2(object sender, EventArgs e)
+    {
+        if (curScene != null)
+            StartCoroutine(UnloadSceneEvent());
+
+        curScene = LaserLevel2;
+        StartCoroutine(LoadSceneEvent());
     }
 
     public void LoadGameBoard(object sender, EventArgs e)

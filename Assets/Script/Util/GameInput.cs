@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
-using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour
 {
@@ -15,11 +11,17 @@ public class GameInput : MonoBehaviour
         action.Player.Enable();
 
         action.Player.Interact.performed += Interacr_Perfomed;
+        action.Player.EnterNextLevel.performed += Player_NextLevel;
     }
 
     public void Interacr_Perfomed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
       EventManager.Instance.RaiseEvent(EventName.InteractPrism, obj);
+    }
+
+    public void Player_NextLevel(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        EventManager.Instance.RaiseEvent(EventName.EnterNextLevel, obj);
     }
 
     public Vector3 GetMovementDirectionNormalized()

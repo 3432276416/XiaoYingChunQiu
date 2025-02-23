@@ -1,28 +1,26 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 /// <summary>
-/// ±ãÓÚ´¥·¢ÊÂ¼þµÄÀ©Õ¹Àà
+/// ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½
 /// </summary>
 public static class EventTriggerExt
 {
     /// <summary>
-    /// ´¥·¢ÊÂ¼þ£¨ÎÞ²ÎÊý£©
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Þ²ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="sender">´¥·¢Ô´</param>
-    /// <param name="eventName">ÊÂ¼þÃû</param>
+    /// <param name="sender">ï¿½ï¿½ï¿½ï¿½Ô´</param>
+    /// <param name="eventName">ï¿½Â¼ï¿½ï¿½ï¿½</param>
     public static void TriggerEvent(this object sender, string eventName)
     {
         EventManager.Instance.RaiseEvent(eventName, sender);
     }
     /// <summary>
-    /// ´¥·¢ÊÂ¼þ£¨ÓÐ²ÎÊý£©
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="sender">´¥·¢Ô´</param>
-    /// <param name="eventName">ÊÂ¼þÃû</param>
-    /// <param name="args">ÊÂ¼þ²ÎÊý</param>
+    /// <param name="sender">ï¿½ï¿½ï¿½ï¿½Ô´</param>
+    /// <param name="eventName">ï¿½Â¼ï¿½ï¿½ï¿½</param>
+    /// <param name="args">ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½</param>
     public static void RaiseEvent(this object sender, string eventName, EventArgs args)
     {
         EventManager.Instance.RaiseEvent(eventName, sender, args);
@@ -31,16 +29,16 @@ public static class EventTriggerExt
 }
 
 /// <summary>
-/// ÊÂ¼þ¹ÜÀíÆ÷
+/// ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 /// </summary>
 public class EventManager : SingletonBase<EventManager>
 {
     private Dictionary<string, EventHandler> handlerDic = new Dictionary<string, EventHandler>();
     /// <summary>
-    /// Ìí¼ÓÒ»¸öÊÂ¼þµÄ¼àÌýÕß
+    /// ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="eventName">ÊÂ¼þÃû</param>
-    /// <param name="handler">ÊÂ¼þ´¦Àíº¯Êý</param>
+    /// <param name="eventName">ï¿½Â¼ï¿½ï¿½ï¿½</param>
+    /// <param name="handler">ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</param>
     public void AddListener(string eventName, EventHandler handler)
     {
         if (handlerDic.ContainsKey(eventName))
@@ -49,38 +47,38 @@ public class EventManager : SingletonBase<EventManager>
             handlerDic.Add(eventName, handler);
     }
     /// <summary>
-    /// ÒÆ³ýÒ»¸öÊÂ¼þµÄ¼àÌýÕß
+    /// ï¿½Æ³ï¿½Ò»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="eventName">ÊÂ¼þÃû</param>
-    /// <param name="handler">ÊÂ¼þ´¦Àíº¯Êý</param>
+    /// <param name="eventName">ï¿½Â¼ï¿½ï¿½ï¿½</param>
+    /// <param name="handler">ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</param>
     public void RemoveListener(string eventName, EventHandler handler)
     {
         if (handlerDic.ContainsKey(eventName))
             handlerDic[eventName] -= handler;
     }
     /// <summary>
-    /// ´¥·¢ÊÂ¼þ£¨ÎÞ²ÎÊý£©
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Þ²ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="eventName">ÊÂ¼þÃû</param>
-    /// <param name="sender">´¥·¢Ô´</param>
+    /// <param name="eventName">ï¿½Â¼ï¿½ï¿½ï¿½</param>
+    /// <param name="sender">ï¿½ï¿½ï¿½ï¿½Ô´</param>
     public void RaiseEvent(string eventName, object sender)
     {
         if (handlerDic.ContainsKey(eventName))
             handlerDic[eventName]?.Invoke(sender, EventArgs.Empty);
     }
     /// <summary>
-    /// ´¥·¢ÊÂ¼þ£¨ÓÐ²ÎÊý£©
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ð²ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="eventName">ÊÂ¼þÃû</param>
-    /// <param name="sender">´¥·¢Ô´</param>
-    /// <param name="args">ÊÂ¼þ²ÎÊý</param>
+    /// <param name="eventName">ï¿½Â¼ï¿½ï¿½ï¿½</param>
+    /// <param name="sender">ï¿½ï¿½ï¿½ï¿½Ô´</param>
+    /// <param name="args">ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½</param>
     public void RaiseEvent(string eventName, object sender, EventArgs args)
     {
         if (handlerDic.ContainsKey(eventName))
             handlerDic[eventName]?.Invoke(sender, args);
     }
     /// <summary>
-    /// Çå¿ÕËùÓÐÊÂ¼þ
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
     /// </summary>
     public void Clear()
     {

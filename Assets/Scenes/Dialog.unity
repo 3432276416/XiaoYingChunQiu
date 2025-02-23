@@ -855,7 +855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerName: {fileID: 474335605}
   speakerContent: {fileID: 248968759}
-  Dialog: {fileID: 1269183960}
+  DialogUI: {fileID: 1269183960}
   typeWriter: {fileID: 182677379}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

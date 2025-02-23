@@ -44,6 +44,15 @@ public partial class @GameInputAcion: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""EnterNextLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""2c1adeae-0b59-44e5-8d54-d18882ec274d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -115,12 +124,12 @@ public partial class @GameInputAcion: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d7961c96-ee1a-4347-b2e8-8a2b91b290d0"",
+                    ""id"": ""4dc468ba-e725-460a-bde3-23c1995043fc"",
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Interact"",
+                    ""action"": ""EnterNextLevel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -133,6 +142,7 @@ public partial class @GameInputAcion: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_EnterNextLevel = m_Player.FindAction("EnterNextLevel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -196,12 +206,14 @@ public partial class @GameInputAcion: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_EnterNextLevel;
     public struct PlayerActions
     {
         private @GameInputAcion m_Wrapper;
         public PlayerActions(@GameInputAcion wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @EnterNextLevel => m_Wrapper.m_Player_EnterNextLevel;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -217,6 +229,9 @@ public partial class @GameInputAcion: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @EnterNextLevel.started += instance.OnEnterNextLevel;
+            @EnterNextLevel.performed += instance.OnEnterNextLevel;
+            @EnterNextLevel.canceled += instance.OnEnterNextLevel;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -227,6 +242,9 @@ public partial class @GameInputAcion: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @EnterNextLevel.started -= instance.OnEnterNextLevel;
+            @EnterNextLevel.performed -= instance.OnEnterNextLevel;
+            @EnterNextLevel.canceled -= instance.OnEnterNextLevel;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -248,5 +266,6 @@ public partial class @GameInputAcion: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnEnterNextLevel(InputAction.CallbackContext context);
     }
 }

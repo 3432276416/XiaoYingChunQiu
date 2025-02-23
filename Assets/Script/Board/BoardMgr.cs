@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class BoardMgr : MonoBehaviour
 {
 
     public GameObject GridPrefab;
-    [SerializeField]public float xstart, ystart; //生成棋盘的初始位置
-    [SerializeField]public int xsize,ysize; //棋盘大小,n x n
+    [SerializeField]public float xstart, ystart; //锟斤拷锟斤拷锟斤拷锟教的筹拷始位锟斤拷
+    [SerializeField]public int xsize,ysize; //锟斤拷锟教达拷小,n x n
     void Start()
     {
        CreateBoard();

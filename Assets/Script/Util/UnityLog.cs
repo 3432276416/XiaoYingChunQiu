@@ -1,4 +1,3 @@
-using System;
 using Serilog;
 using Serilog.Core;
 using Serilog.Sinks.Unity3D;

@@ -1,13 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using System.Data;
 using System.IO;
 using ExcelDataReader;
 using System.Text;
-using UnityEngine.AddressableAssets;
 using System;
+using UnityEngine.SceneManagement;
 
 public class VNMgr : MonoBehaviour
 {
@@ -16,7 +14,7 @@ public class VNMgr : MonoBehaviour
     public TextMeshProUGUI speakerName;
     public TextMeshProUGUI speakerContent;
     public GameObject DialogUI;
-    public TypeWriter typeWriter; //´òÓ¡ÎÄ×ÖµÄ½Å±¾
+    public TypeWriter typeWriter; //ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ÖµÄ½Å±ï¿½
     private string filePath;
     public List<Content> contents;
     private int contentIndex=0;
@@ -25,10 +23,31 @@ public class VNMgr : MonoBehaviour
     private void Awake()
     {
         EventManager.Instance.AddListener(EventName.TeachLaserLevel, TeachLaserLevelStory);
+        EventManager.Instance.AddListener(EventName.TeachObstacle, TeachObstacle);
         EventManager.Instance.AddListener(EventName.LaserLevelSuccess, SuccessLaserLevelStory);
         EventManager.Instance.AddListener(EventName.LoadIntroduction, PlayIntroductionStory);
+        SetDialogVisible(false);
+    }
+
+
+    private void OnEnable()
+    {
+        if(!DialogUI)
+        {
+            DialogUI = GameObject.Find("DialogUI");
+        }
+
+        if(this.gameObject.scene==SceneManager.GetSceneByName(SceneName.LaserLevel2))
+        {
+            EventManager.Instance.RaiseEvent(EventName.TeachObstacle,this.gameObject);
+        }
+        if (this.gameObject.scene == SceneManager.GetSceneByName(SceneName.LaserLevel1))
+        {
+            EventManager.Instance.RaiseEvent(EventName.TeachLaserLevel, this.gameObject);
+        }
         
     }
+
     private void Update()
     {
         if(Input.GetMouseButtonDown(0))
@@ -41,7 +60,7 @@ public class VNMgr : MonoBehaviour
         }
     }
 
-    void LoadStoryFromFile(string path)  //´ÓÂ·¾¶¼ÓÔØxlsÎÄ¼þ×÷Îª¶Ô»°
+    void LoadStoryFromFile(string path)  //ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½xlsï¿½Ä¼ï¿½ï¿½ï¿½Îªï¿½Ô»ï¿½
     {
         FileStream stream=File.Open(path, FileMode.Open, FileAccess.Read);
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
@@ -63,11 +82,11 @@ public class VNMgr : MonoBehaviour
         stream.Dispose();
     }
 
-    void ShowNextText()  //ÏÂÒ»ÐÐÎÄ×Ö
+    void ShowNextText()  //ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
-        if(contentIndex >= contents.Count-1 && !typeWriter.isTyping)
+        if(contentIndex >= contents.Count-1 && !typeWriter.isTyping) //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         {
-            SetDialogVisible(false);
+            SetDialogVisible(false);  
             return;
         }
         if(typeWriter.isTyping)
@@ -85,13 +104,13 @@ public class VNMgr : MonoBehaviour
 
     }
 
-    void ShowCurText()  //µ±Ç°ÎÄ×Ö
+    void ShowCurText()  //ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½
     {
         speakerName.text= contents[contentIndex].name;
         speakerContent.text= contents[contentIndex].content;
     }
 
-    void ShowUpperText()  //ÉÏÒ»ÐÐÎÄ×Ö
+    void ShowUpperText()  //ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         if (contentIndex <=0)
         {
@@ -118,11 +137,9 @@ public class VNMgr : MonoBehaviour
        DialogUI.gameObject.SetActive(isShow);
     }
 
-    public void CloseDialog(object name, EventArgs args)
-    {
-    }
+ 
 
-    #region ÊÂ¼þº¯Êý
+    #region ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
     public void PlayIntroductionStory(object name, EventArgs args)
     {
         LoadStoryFromFile(Story.introduction_path);
@@ -133,6 +150,12 @@ public class VNMgr : MonoBehaviour
     public void TeachLaserLevelStory(object name, EventArgs args)
     {
         LoadStoryFromFile(Story.laser_describe_path);
+        SetDialogVisible(true);
+        ShowCurText();
+    }
+    public void TeachObstacle(object name, EventArgs args)
+    {
+        LoadStoryFromFile(Story.teach_obstacle_path);
         SetDialogVisible(true);
         ShowCurText();
     }

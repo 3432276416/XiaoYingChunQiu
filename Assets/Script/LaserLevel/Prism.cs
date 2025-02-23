@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,21 +14,23 @@ public enum PrismType
 
 public class Prism : MonoBehaviour
 {
-    public GameObject Laser; //¼¤¹âÔ¤ÖÆÌå
+    public GameObject LaserPrefab; //ï¿½ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½ï¿½
+    public Laser laser;
     public GameObject Crystal;
     public Vector3 addtionVec=new Vector3(0,1.5f,0);
     public PrismType type;
-    public List<Vector3> forwards = new List<Vector3>(); //Ðý×ª³¯Ïò£¬ÊÖ¶¯¸ü¸Ä
+    public List<Vector3> forwards = new List<Vector3>(); //ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½ï¿½
     public float rotateSpeed = 10;
     public int forwardIndex = 0;
-    public bool isShooting; //ÊÇ·ñÕýÔÚ·´Éä¹âÏß
     public GameObject Rotate_Text;
     private Vector3 textVec=new Vector3(-5.37f,1f,-3.93f);
+   [SerializeField] public LaserType laserType;
+    public bool isShooting=false;
     private void Start()
     {
         isShooting = false;
         forwardIndex = 0;
-        if (Laser != null && type == PrismType.Start)
+        if (LaserPrefab != null && type == PrismType.Start)
         {
           CreateLaser();
         }
@@ -47,17 +48,23 @@ public class Prism : MonoBehaviour
 
     public void CreateLaser()
     {
-      
-            Instantiate(Laser, this.transform.position + addtionVec, this.transform.rotation, this.transform);
-            this.transform.localEulerAngles = forwards[0] - this.transform.localEulerAngles;
-            isShooting = true;
-            forwardIndex = 0;
+            
+           GameObject oj=Instantiate(LaserPrefab, this.transform.position + addtionVec, this.transform.rotation, this.transform);
+           laser = oj.GetComponent<Laser>();
+           laser.SetLaserType(laserType);
+           this.transform.localEulerAngles = forwards[0] - this.transform.localEulerAngles;
+            isShooting=true;
+           forwardIndex = 0;
         
     }
 
 
     public void RotatePrism()
     {
+        if(this.IsShootingPrism()) //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        {
+            laser.shootingPrism.DestoryLaser();
+        }
            
         if (forwardIndex>=forwards.Count-1)
         {
@@ -72,15 +79,48 @@ public class Prism : MonoBehaviour
 
     }
 
-    public void ShowRotateText(bool isShow) //Õ¹Ê¾ÌáÊ¾Ðý×ªµÄui
+    public void ShowRotateText(bool isShow) //Õ¹Ê¾ï¿½ï¿½Ê¾ï¿½ï¿½×ªï¿½ï¿½ui
     {
         
             Rotate_Text.SetActive(isShow);
             Rotate_Text.transform.transform.localEulerAngles = Vector3.zero;
     }
-    public void LaserToEnd(Laser laser)  //µ½´ïÖÕµã´¥·¢º¯Êý
+
+
+    public void DestoryLaser()
+    {
+        Laser[] lasers=GetComponentsInChildren<Laser>(); 
+        if(lasers!=null)
+        {
+            foreach(Laser laser in lasers)
+            {
+                if(laser.shootingPrism !=null)
+                {
+                
+                    Prism pm=laser.shootingPrism.gameObject.GetComponent<Prism>();
+                    pm.DestoryLaser(); //ï¿½Ý¹ï¿½Ý»Ù¼ï¿½ï¿½ï¿½
+
+                }
+                isShooting = false;
+                Destroy(laser.gameObject);
+            }
+        }
+    }
+
+
+   
+    public bool IsShootingPrism() //ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    {
+        return laser.shootingPrism != null;
+    }
+
+    public void LaserToEnd(Laser laser)  //ï¿½ï¿½ï¿½ï¿½ï¿½Õµã´¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
        EventManager.Instance.RaiseEvent(EventName.LaserToEnd,laser);
     }
+
+   
+
+
   
 }

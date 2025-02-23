@@ -1,10 +1,6 @@
 
 using System;
-using System.IO;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.SceneManagement;
 
 public class DialogMgr : MonoBehaviour
 {

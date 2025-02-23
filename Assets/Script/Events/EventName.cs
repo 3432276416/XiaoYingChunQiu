@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public static class EventName
 {
     public const string PlayerDead = "PlayerDead";
@@ -12,5 +8,11 @@ public static class EventName
     public const string LaserToEnd = "LaserToEnd";
     public const string InteractPrism = "InteractPrism";
     public const string CloseDialog = "CloseDialog";
+    public const string TeachObstacle = "TeachObstacle";
+    public const string LoadLaserLevel1 = "LoadLaserLevel1";
+    public const string LoadLaserLevel2 = "LoadLaserLevel2 ";
+    public const string EnterNextLevel = "EnterNextLevel ";
+
+
 
 }

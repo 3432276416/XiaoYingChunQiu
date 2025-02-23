@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -132,8 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60072016}
-  - component: {fileID: 60072015}
   - component: {fileID: 60072017}
+  - component: {fileID: 60072018}
   m_Layer: 0
   m_Name: FadePanel
   m_TagString: Untagged
@@ -141,18 +141,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &60072015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60072014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c17c5a5b14ee17d4994f18b7729bb528, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &60072016
 Transform:
   m_ObjectHideFlags: 0
@@ -185,6 +173,18 @@ MonoBehaviour:
   sourceAsset: {fileID: 9197481963319205126, guid: 93a139650f7f8f648a344ac66ef6593b,
     type: 3}
   m_SortingOrder: 0
+--- !u!114 &60072018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60072014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2e1e5f4c5d9ef45aa4b108837f1ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1264337516
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   GameMenu:
-    m_AssetGUID: 
+    m_AssetGUID: 3765789562b72a84d9eeaa343c8ea947
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
@@ -254,12 +254,17 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  LaberLevel:
-    m_AssetGUID: 73163e660590bd649b0a2232cde9c0e7
+  LaserLevel1:
+    m_AssetGUID: 4380f6897de7dc746a13ba178c1cb8ff
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  fadePanel: {fileID: 60072015}
+  LaserLevel2:
+    m_AssetGUID: 20d92a91e8443bb499081d10d1169e51
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  fadePanel: {fileID: 60072018}
   curRoomVector: {x: 0, y: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

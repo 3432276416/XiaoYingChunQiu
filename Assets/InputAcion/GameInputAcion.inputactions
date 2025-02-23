@@ -1,5 +1,5 @@
 {
-    "name": "GameInput",
+    "name": "GameInputAcion",
     "maps": [
         {
             "name": "Player",
@@ -18,6 +18,15 @@
                     "name": "Interact",
                     "type": "Button",
                     "id": "fef40b5e-8041-48e1-a50f-e0530a4b583a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "EnterNextLevel",
+                    "type": "Button",
+                    "id": "2c1adeae-0b59-44e5-8d54-d18882ec274d",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -93,12 +102,12 @@
                 },
                 {
                     "name": "",
-                    "id": "d7961c96-ee1a-4347-b2e8-8a2b91b290d0",
+                    "id": "4dc468ba-e725-460a-bde3-23c1995043fc",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Interact",
+                    "action": "EnterNextLevel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

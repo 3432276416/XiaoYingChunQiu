@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,30 +12,37 @@ public class Player : MonoBehaviour
     [SerializeField] private GameInput gameInput;
     [SerializeField] private LayerMask layerMask;
     public Camera MainCamera;
-    private Prism selectedPrism; //Ñ¡ÔñµÄ·´ÉäÎïÌå
+    private Prism selectedPrism; //Ñ¡ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     private float interactDistance = 2f;
     private Vector3 lastInteractDir;
-
+    public bool isSuccess; //ï¿½Ç·ï¿½Í¨ï¿½Øµï¿½Ç°ï¿½Ù¿ï¿½
     private bool isWalking = false;
 
 
     private void Awake()
     {
+        isSuccess = false;
         Instance = this;
         EventManager.Instance.AddListener(EventName.InteractPrism, InteractPrism);
         EventManager.Instance.AddListener(EventName.LaserToEnd, LaserLevelSuccess);
+        EventManager.Instance.AddListener(EventName.EnterNextLevel,NextLevel);
     }
 
     private void OnEnable()
     {
-        
+        isSuccess = false;
     }
     private void Start()
     {
-        if (gameObject.scene == SceneManager.GetSceneByName(SceneName.LaserLevel)) //µ±Ç°Íæ¼ÒÔÚ laserLevel¹Ø¿¨ÖÐ
+        if (gameObject.scene == SceneManager.GetSceneByName(SceneName.LaserLevel1)) //ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ laserLevelï¿½Ø¿ï¿½ï¿½ï¿½
         {
-            Debug.Log("Íæ¼Òµ±Ç°ÔÚ¼¤¹â¹Ø¿¨");
+            Debug.Log("ï¿½ï¿½Òµï¿½Ç°ï¿½Ú¼ï¿½ï¿½ï¿½Ø¿ï¿½1");
             EventManager.Instance.RaiseEvent(EventName.TeachLaserLevel, this);
+        }
+        if (gameObject.scene == SceneManager.GetSceneByName(SceneName.LaserLevel2)) //ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ laserLevelï¿½Ø¿ï¿½ï¿½ï¿½
+        {
+            Debug.Log("ï¿½ï¿½Òµï¿½Ç°ï¿½Ú¼ï¿½ï¿½ï¿½Ø¿ï¿½2");
+            EventManager.Instance.RaiseEvent(EventName.TeachObstacle, this);
         }
 
     }
@@ -73,7 +77,7 @@ public class Player : MonoBehaviour
 
         isWalking = direction != Vector3.zero;
 
-        if (!Physics.Raycast(transform.position, direction, 1f)) //¼ì²âÊÇ·ñÓÐÕÏ°­Îï
+        if (!Physics.Raycast(transform.position, direction, 1f)) //ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½
         {
             transform.position += direction * Time.deltaTime * moveSpeed;
             MainCamera.transform.position += direction * Time.deltaTime * moveSpeed;
@@ -92,7 +96,7 @@ public class Player : MonoBehaviour
         //{
         //    lastInteractDir = moveDir;
         //}
-        float radius = 1.6f; // °ë¾¶´óÐ¡
+        float radius = 1.6f; // ï¿½ë¾¶ï¿½ï¿½Ð¡
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, radius);
         
         foreach (Collider hit in hitColliders)
@@ -115,9 +119,9 @@ public class Player : MonoBehaviour
     }
 
 
-    public void InteractPrism(object name,EventArgs args) //È·ÈÏÒÆ¶¯×ªÌ¨
+    public void InteractPrism(object name,EventArgs args) //È·ï¿½ï¿½ï¿½Æ¶ï¿½×ªÌ¨
     {
-        Debug.Log("È·ÈÏÒÆ¶¯×ªÌ¨");
+      
         if (selectedPrism != null)
         {
             selectedPrism.RotatePrism();
@@ -127,6 +131,19 @@ public class Player : MonoBehaviour
     public void LaserLevelSuccess(object name, EventArgs args)
     {
         EventManager.Instance.RaiseEvent(EventName.LaserLevelSuccess, this);
+        isSuccess = true;
+    }
+
+    public void NextLevel(object name, EventArgs args)
+    {
+        if (isSuccess)
+        {
+            if (this.gameObject.scene == SceneManager.GetSceneByName(SceneName.LaserLevel1))
+            {
+                EventManager.Instance.RaiseEvent(EventName.LoadLaserLevel2, this);
+            }
+             
+        }
     }
 
 }

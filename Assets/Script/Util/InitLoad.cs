@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -11,7 +9,7 @@ public class InitLoad : MonoBehaviour
 
       private void Awake()
       {
-          //╪стьеДжц
+          //О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
           UnityLog.Init();
           Addressables.LoadSceneAsync(scene);
         
