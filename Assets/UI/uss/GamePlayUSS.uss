@@ -1,0 +1,39 @@
+.turnbutton {
+}
+
+.ActiveBtn {
+}
+
+.turnbutton:hover {
+    scale: 1.1 1.1;
+}
+
+.turnbutton:active {
+    scale: 0.9 0.9;
+}
+
+.ActiveBtn:hover {
+    opacity: 1;
+    translate: 0 0;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.ActiveBtn:active {
+    border-left-color: rgb(115, 115, 115);
+    border-right-color: rgb(115, 115, 115);
+    border-top-color: rgb(115, 115, 115);
+    border-bottom-color: rgb(115, 115, 115);
+    border-top-width: 8px;
+    border-right-width: 8px;
+    border-bottom-width: 8px;
+    border-left-width: 8px;
+    opacity: 0.5;
+}

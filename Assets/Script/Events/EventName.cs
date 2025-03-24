@@ -12,7 +12,5 @@ public static class EventName
     public const string LoadLaserLevel1 = "LoadLaserLevel1";
     public const string LoadLaserLevel2 = "LoadLaserLevel2 ";
     public const string EnterNextLevel = "EnterNextLevel ";
-
-
-
+    public const string Menu = "Menu";
 }

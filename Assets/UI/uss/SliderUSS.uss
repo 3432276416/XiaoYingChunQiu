@@ -1,0 +1,9 @@
+#unity-tracker {
+    background-image: url('project://database/Assets/Art/%E6%8C%89%E9%92%AE%E3%80%81ui%E3%80%81buff/%E6%BB%91%E8%BD%A8.png?fileID=-2116048784&guid=607acd0372b7f1745811d21b8ac12242&type=3#滑轨');
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+#unity-dragger {
+    -unity-background-scale-mode: stretch-to-fill;
+    background-image: url('project://database/Assets/Art/%E6%8C%89%E9%92%AE%E3%80%81ui%E3%80%81buff/%E6%BB%91%E5%9D%97.png?fileID=-1112742005&guid=aa0940eebabee314185962993270c59d&type=3#滑块');
+}

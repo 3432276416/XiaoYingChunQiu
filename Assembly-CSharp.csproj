@@ -104,6 +104,7 @@
      <Compile Include="Assets\Script\Board\GridMgr.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Script\Events\EventManager.cs" />
+     <Compile Include="Assets\Script\UI\MenuPanel.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -133,14 +134,22 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\_Assets\Materials" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
+     <Folder Include="Assets\UI\uss" />
+     <None Include="Assets\UI\uss\ScrollViewUSS.uss" />
+     <None Include="Assets\UI\SettingPanel.uxml" />
      <Folder Include="Assets\Hovl Studio\HSFiles\Shaders" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <None Include="Assets\UI\Bestiary\BestiaryPanel.uxml" />
+     <None Include="Assets\UI\uss\SliderUSS.uss" />
      <Folder Include="Assets\Settings" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Script\Util" />
      <Folder Include="Assets\AddressableAssetsData\AssetGroups\Schemas" />
+     <None Include="Assets\UI\Bestiary\BestiaryTemplate.uxml" />
      <Folder Include="Assets\Resources\Fbx" />
      <Folder Include="Assets\Resources\Fbx\新建文件夹" />
+     <Folder Include="Assets\UI\Bestiary" />
+     <None Include="Assets\UI\uss\ScrollCardUSS.uss" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <Folder Include="Assets\Level" />
      <Folder Include="Assets\Hovl Studio\Raw" />
@@ -149,9 +158,12 @@
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <None Include="Assets\UIDocument\Fade Panel.uxml" />
+     <None Include="Assets\UI\Gameplay Panel.uxml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Level\ColorLevel" />
      <Folder Include="Assets\_Assets\PrefabsVisuals\CountersVisuals" />
+     <Folder Include="Assets\UI\Card" />
+     <None Include="Assets\UI\Bestiary\BestiaryInfoPanel.uxml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\Resources\Story" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
@@ -164,6 +176,7 @@
      <Folder Include="Assets\_Assets\Sounds\Music" />
      <Folder Include="Assets\AddressableAssetsData\Windows" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\UI\Fade Panel.uxml" />
      <Folder Include="Assets\Resources\Fonts" />
      <Folder Include="Assets\Settings\Scenes" />
      <Folder Include="Assets\TextMesh Pro" />
@@ -177,6 +190,8 @@
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts" />
      <Folder Include="Assets\Resources\Image" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources" />
+     <None Include="Assets\UI\CardInfoPanel.uxml" />
+     <None Include="Assets\UI\HpBar.uxml" />
      <Folder Include="Assets\Resources\Texture" />
      <Folder Include="Assets\Fonts" />
      <Folder Include="Assets\GameData\Story" />
@@ -187,6 +202,7 @@
      <None Include="Assets\Hovl Studio\3D Lasers Pack\Demo scene lasers\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\UI\RestRoom Panel.uxml" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
@@ -210,18 +226,25 @@
      <Folder Include="Assets\GameData" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\Hovl Studio" />
+     <None Include="Assets\UI\uss\ScrollViewVerticalUSS.uss" />
+     <None Include="Assets\UI\Card\CardTemplate.uxml" />
+     <Folder Include="Assets\UI" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Prefabs" />
      <Folder Include="Assets\Script\Level" />
      <Folder Include="Assets\Resources\Fonts\Fonts" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Scenes" />
      <Folder Include="Assets\Resources\Mesh" />
+     <None Include="Assets\UI\ChooseCardPanel.uxml" />
      <Folder Include="Assets\Script\UI" />
+     <None Include="Assets\UI\uss\HealthBarUSS.uss" />
+     <None Include="Assets\UI\MenuPanel.uxml" />
      <Folder Include="Assets\Hovl Studio\HSFiles" />
      <Folder Include="Assets\UI Toolkit" />
      <Folder Include="Assets\Resources\Fbx\crystal" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets\Hovl Studio\HSFiles\Scripts" />
      <Folder Include="Assets\Hovl Studio\3D Lasers Pack\Prefabs" />
+     <None Include="Assets\UI\GameWinPanel.uxml" />
      <Folder Include="Assets\AddressableAssetsData\AssetGroups" />
      <Folder Include="Assets\Prefabs\Btn" />
      <None Include="Assets\Hovl Studio\HSFiles\Shaders\Add_CenterGlow.shader" />
@@ -229,11 +252,14 @@
      <Folder Include="Assets\Prefabs\Card" />
      <Folder Include="Assets\_Assets\PrefabsVisuals" />
      <Folder Include="Assets\_Assets\Sounds\SFX" />
+     <None Include="Assets\UI\GameLosePanel.uxml" />
      <Folder Include="Assets\_Assets\Materials\Player" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <Folder Include="Assets\UIDocument" />
+     <None Include="Assets\UI\uss\GamePlayUSS.uss" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Textures" />
+     <None Include="Assets\UI\CardLockedPanel.uxml" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras" />
@@ -246,6 +272,7 @@
      <Folder Include="Assets\_Assets\Textures\Icons" />
      <Folder Include="Assets\Hovl Studio\3D Lasers Pack" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\UI\HeroPanel.uxml" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <Folder Include="Assets\Prefab" />
      <Folder Include="Assets\_Assets\Textures" />
@@ -959,6 +986,9 @@
      </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>D:\Unity Program\XiaoYingChunQiu\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>D:\Unity Program\XiaoYingChunQiu\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
      <HintPath>D:\Unity Program\XiaoYingChunQiu\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>

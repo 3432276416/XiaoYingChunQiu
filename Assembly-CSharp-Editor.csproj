@@ -810,6 +810,9 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>D:\Unity Program\XiaoYingChunQiu\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>D:\Unity Program\XiaoYingChunQiu\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
      <HintPath>D:\Unity Program\XiaoYingChunQiu\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
      </Reference>

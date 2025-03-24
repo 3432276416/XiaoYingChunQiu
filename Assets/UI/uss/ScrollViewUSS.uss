@@ -1,0 +1,58 @@
+#unity-dragger {
+    background-image: url('project://database/Assets/Art/CardMenu/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E7%99%BD.png?fileID=2800000&guid=ad7a14a55f056bf49a66a94ac620b5c6&type=3#滚动条白');
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-slice-scale: 1px;
+    display: flex;
+}
+
+#unity-low-button {
+    display: flex;
+    background-image: url('project://database/Assets/Art/CardMenu/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%8C%89%E9%92%AE.png?fileID=2800000&guid=41b6afae8222b9e4dbd20e7036fb21d9&type=3#滚动条按钮');
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    opacity: 1;
+}
+
+#unity-high-button {
+    display: flex;
+    -unity-background-scale-mode: scale-to-fit;
+    background-image: url('project://database/Assets/Art/CardMenu/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%8C%89%E9%92%AE.png?fileID=2800000&guid=41b6afae8222b9e4dbd20e7036fb21d9&type=3#滚动条按钮');
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+#unity-slider {
+    background-image: url('project://database/Assets/Art/CardMenu/%E6%BB%9A%E5%8A%A8%E6%9D%A1.png?fileID=2800000&guid=4b0557f48802d0c499dab5102b33666a&type=3#滚动条');
+    -unity-background-scale-mode: stretch-to-fill;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+#unity-drag-container {
+    width: 100%;
+    align-items: auto;
+    justify-content: flex-start;
+    align-self: flex-start;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+#unity-tracker {
+    display: none;
+}
+
+.slot {
+}

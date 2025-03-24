@@ -20,30 +20,24 @@ public class SceneLoadManager : MonoBehaviour
     public FadePanel fadePanel;
 
     public Vector2Int curRoomVector;
-
-
-
-    public void OnLoadRoomEvent(object data)
-    {
-
-        StartCoroutine(UnloadSceneEvent());   //加载房间
-
-        //StartCoroutine(LoadSceneEventWithEventExecute(AfterLoadRoomEvent, curRoom, this));
-
-    }
+    
 
     private void Awake()
     {
         EventManager.Instance.AddListener(EventName.LoadDialog, LoadDialog);  
         EventManager.Instance.AddListener(EventName.LoadLaserLevel1, LoadLaserLevel1);
         EventManager.Instance.AddListener(EventName.LoadLaserLevel2, LoadLaserLevel2);
+        EventManager.Instance.AddListener(EventName.Menu, Menu);
 
-        EventManager.Instance.RaiseEvent(EventName.LoadLaserLevel1,this);
+        EventManager.Instance.RaiseEvent(EventName.Menu,this);
     }
-
-    public void Start()
+    private void Menu(object sender, EventArgs e)
     {
-        
+        if (curScene != null)
+            StartCoroutine(UnloadSceneEvent());
+
+        curScene = GameMenu;
+        StartCoroutine(LoadSceneEvent());
     }
 
     public void LoadLaserLevel1(object sender, EventArgs e)
